@@ -1,0 +1,73 @@
+﻿<Window x:Class="SampleContent.firstForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleContent"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="firstForm" Height="Auto" Width="auto" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10" HorizontalAlignment="Stretch" ShowGridLines="True" VerticalAlignment="Top">       
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="300" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="0" Grid.Column="0" Height="30">Họ đệm: </TextBlock>
+        <TextBox Style="{ StaticResource ResourceKey=rowGrid }"  
+                 Grid.Row="0" Grid.Column="1" Height="auto" Name="txtHoDem"></TextBox>
+
+        <TextBlock Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="1" Grid.Column="0" Height="30">Tên:</TextBlock>
+        <TextBox Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="1" Grid.Column="1" Height="auto"
+                 Name="txtTen"></TextBox>
+
+        <TextBlock Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="2" Grid.Column="0" Height="30">
+            Giới tính:</TextBlock>
+        <StackPanel Style="{ StaticResource ResourceKey=rowGrid }" 
+                    Orientation="Horizontal"
+                    Grid.Row="2" Grid.Column="1" Height="auto">
+            <RadioButton Name="rdnNam" GroupName="rdnGroupGender">Nam</RadioButton>
+            <Separator Width="10" Background="Transparent"/>
+            <RadioButton Name="rdnNu" GroupName="rdnGroupGender">Nữ</RadioButton>
+        </StackPanel>
+
+        <TextBlock Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="3" Grid.Column="0" Height="30">
+            Ngoại ngữ:</TextBlock>
+        <StackPanel Style="{ StaticResource ResourceKey=rowGrid }" 
+                    Orientation="Horizontal"
+                    Grid.Row="3" Grid.Column="1" Height="auto">
+            <CheckBox Content="Tiếng Anh"></CheckBox>
+            <Separator Width="10" Background="Transparent"/>
+            <CheckBox Content="Tiếng Trung"></CheckBox>
+        </StackPanel>
+
+        <TextBlock Style="{ StaticResource ResourceKey=rowGrid }" Grid.Row="4" Grid.Column="0" Height="30">
+            Quê quán:</TextBlock>
+        <ListBox Grid.Row="4" Name="lstBox" Grid.Column="1" SelectedIndex="0">
+            <ListBoxItem>Hà nội</ListBoxItem>
+            <ListBoxItem>Tphcm</ListBoxItem>
+            <ListBoxItem>Huế</ListBoxItem>
+            <ListBoxItem>Đà nẵng</ListBoxItem>
+        </ListBox>
+
+        <StackPanel Height="auto" Style="{ StaticResource ResourceKey=rowGrid }" 
+                    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button Name="btnXemThongTin" Padding="10,0,10,0" Content="Xem thông tin" Click="btnXemThongTin_Click"></Button>
+            <Separator Width="10" Background="Transparent"/>
+            <Button Name="btnNhapLap" Padding="10,0,10,0" Content="Nhập lại"></Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>

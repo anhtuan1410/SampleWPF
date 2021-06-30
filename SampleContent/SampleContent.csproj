@@ -63,6 +63,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="firstForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gridLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +84,12 @@
     </Compile>
     <Compile Include="dockPanel.xaml.cs">
       <DependentUpon>dockPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="firstForm.xaml.cs">
+      <DependentUpon>firstForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gridLayout.xaml.cs">
+      <DependentUpon>gridLayout.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -20,6 +20,7 @@
                     DisplayMemberPath="Value"
                     SelectedValuePath="Id"
                     Width="200"/>
+            <Button Name="btnShowup" Content="Show up" Width="auto" Click="btnShowup_Click"></Button>
         </StackPanel>
         
     </Button>

@@ -59,5 +59,11 @@ namespace SampleContent
             var t = cbotest.SelectedValue;
             MessageBox.Show(t.ToString());
         }
+
+        private void btnShowup_Click(object sender, RoutedEventArgs e)
+        {
+            firstForm f = new firstForm();
+            f.ShowDialog();
+        }
     }
 }
