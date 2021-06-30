@@ -1,0 +1,25 @@
+﻿<Window x:Class="SampleContent.nextPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleContent"
+        mc:Ignorable="d"
+        Title="nextPage" Height="450" Width="800">
+    <WrapPanel Background="Beige">
+        <Border Background="Green" BorderBrush="Black" BorderThickness="3">
+            <TextBlock FontSize="14"
+ Foreground="#58290A">
+ Chú cào cào nhỏ, ngồi trong đám cỏ
+            </TextBlock>
+        </Border>
+        
+        <Border Background="Green" BorderBrush="Black" BorderThickness="3">
+            <Button>Control 2</Button>
+        </Border>
+        
+        <Border BorderBrush="#feca00" BorderThickness="2">
+            <TextBlock>Control 3</TextBlock>
+        </Border>
+    </WrapPanel>
+</Window>
